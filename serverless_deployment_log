@@ -1,0 +1,385 @@
+C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend>sls deploy -v
+Serverless: Configuration warning at 'provider.environment.AWS_NODEJS_CONNECTION_REUSE_ENABLED': unsupported configuration format
+Serverless:
+Serverless: Learn more about configuration validation here: http://slss.io/configuration-validation
+Serverless:
+Serverless: Using configuration:
+{
+  "webpackConfig": "./webpack.config.js",
+  "includeModules": true,
+  "packagerOptions": {
+    "scripts": [
+      "rm -rf node_modules/aws-sdk"
+    ]
+  },
+  "packager": "npm",
+  "keepOutputDirectory": false
+}
+Serverless: Removing C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack
+Serverless: Using multi-compile (individual packaging)
+Serverless: Bundling with Webpack...
+Time: 1809ms
+Built at: 10/21/2020 12:32:04 AM
+                                 Asset      Size  Chunks                   Chunk Names
+    src/lambda/auth/auth0Authorizer.js  2.38 KiB       0  [emitted]        src/lambda/auth/auth0Authorizer
+src/lambda/auth/auth0Authorizer.js.map  9.24 KiB       0  [emitted] [dev]  src/lambda/auth/auth0Authorizer
+Entrypoint src/lambda/auth/auth0Authorizer = src/lambda/auth/auth0Authorizer.js src/lambda/auth/auth0Authorizer.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "axios" 42 bytes {0} [built]
+[3] external "source-map-support/register" 42 bytes {0} [built]
+[4] ./src/lambda/auth/auth0Authorizer.ts + 1 modules 2.53 KiB {0} [built]
+    | ./src/lambda/auth/auth0Authorizer.ts 2.2 KiB [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+Time: 2193ms
+Built at: 10/21/2020 12:32:04 AM
+                              Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/getMenuItems.js  4.43 KiB       0  [emitted]        src/lambda/http/getMenuItems
+src/lambda/http/getMenuItems.js.map  17.3 KiB       0  [emitted] [dev]  src/lambda/http/getMenuItems
+Entrypoint src/lambda/http/getMenuItems = src/lambda/http/getMenuItems.js src/lambda/http/getMenuItems.js.map
+[0] external "aws-sdk" 42 bytes {0} [built]
+[1] external "aws-xray-sdk" 42 bytes {0} [built]
+[2] external "winston" 42 bytes {0} [built]
+[3] external "jsonwebtoken" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/getMenuItems.ts + 6 modules 6.6 KiB {0} [built]
+    | ./src/lambda/http/getMenuItems.ts 952 bytes [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/menuItemsAccess.ts 2.64 KiB [built]
+    | ./src/helpers/s3Helper.ts 1.23 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/menuItem.ts 28 bytes [built]
+Time: 2384ms
+Built at: 10/21/2020 12:32:04 AM
+                                Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/deleteMenuItem.js  4.23 KiB       0  [emitted]        src/lambda/http/deleteMenuItem
+src/lambda/http/deleteMenuItem.js.map  16.1 KiB       0  [emitted] [dev]  src/lambda/http/deleteMenuItem
+Entrypoint src/lambda/http/deleteMenuItem = src/lambda/http/deleteMenuItem.js src/lambda/http/deleteMenuItem.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "aws-sdk" 42 bytes {0} [built]
+[3] external "aws-xray-sdk" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/deleteMenuItem.ts + 5 modules 5.99 KiB {0} [built]
+    | ./src/lambda/http/deleteMenuItem.ts 1.54 KiB [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/menuItemsAccess.ts 2.64 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/menuItem.ts 28 bytes [built]
+Time: 2248ms
+Built at: 10/21/2020 12:32:04 AM
+                                Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/createMenuItem.js  3.77 KiB       0  [emitted]        src/lambda/http/createMenuItem
+src/lambda/http/createMenuItem.js.map    15 KiB       0  [emitted] [dev]  src/lambda/http/createMenuItem
+Entrypoint src/lambda/http/createMenuItem = src/lambda/http/createMenuItem.js src/lambda/http/createMenuItem.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "aws-sdk" 42 bytes {0} [built]
+[3] external "aws-xray-sdk" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/createMenuItem.ts + 5 modules 5.2 KiB {0} [built]
+    | ./src/lambda/http/createMenuItem.ts 767 bytes [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/menuItemsAccess.ts 2.64 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/menuItem.ts 28 bytes [built]
+Time: 2397ms
+Built at: 10/21/2020 12:32:05 AM
+                                Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/updateMenuItem.js  4.14 KiB       0  [emitted]        src/lambda/http/updateMenuItem
+src/lambda/http/updateMenuItem.js.map  16.1 KiB       0  [emitted] [dev]  src/lambda/http/updateMenuItem
+Entrypoint src/lambda/http/updateMenuItem = src/lambda/http/updateMenuItem.js src/lambda/http/updateMenuItem.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "aws-sdk" 42 bytes {0} [built]
+[3] external "aws-xray-sdk" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/updateMenuItem.ts + 5 modules 5.9 KiB {0} [built]
+    | ./src/lambda/http/updateMenuItem.ts 1.46 KiB [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/menuItemsAccess.ts 2.64 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/menuItem.ts 28 bytes [built]
+Time: 2377ms
+Built at: 10/21/2020 12:32:04 AM
+                                   Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/generateUploadUrl.js  4.71 KiB       0  [emitted]        src/lambda/http/generateUploadUrl
+src/lambda/http/generateUploadUrl.js.map  17.9 KiB       0  [emitted] [dev]  src/lambda/http/generateUploadUrl
+Entrypoint src/lambda/http/generateUploadUrl = src/lambda/http/generateUploadUrl.js src/lambda/http/generateUploadUrl.js.map
+[0] external "aws-sdk" 42 bytes {0} [built]
+[1] external "aws-xray-sdk" 42 bytes {0} [built]
+[2] external "winston" 42 bytes {0} [built]
+[3] external "jsonwebtoken" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/generateUploadUrl.ts + 6 modules 7.05 KiB {0} [built]
+    | ./src/lambda/http/generateUploadUrl.ts 1.38 KiB [built]
+    | ./src/helpers/s3Helper.ts 1.23 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/dataLayer/menuItemsAccess.ts 2.64 KiB [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/menuItem.ts 28 bytes [built]
+Serverless: Fetch dependency graph from C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\package.json
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Package lock found - Using locked versions
+Serverless: Packing external modules: winston@^3.2.1, jsonwebtoken@^8.5.1, axios@^0.19.0, source-map-support@^0.5.10, aws-xray-sdk@^2.5.0, uuid@^3.3.3
+Serverless: Package took [21671 ms]
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\Auth [14508 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\Auth [3434 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\Auth [1069 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GetMenuItems [14740 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GetMenuItems [3207 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GetMenuItems [1727 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\DeleteMenuItem [14528 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\DeleteMenuItem [2719 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\DeleteMenuItem [1675 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\CreateMenuItem [14330 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\CreateMenuItem [2544 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\CreateMenuItem [1798 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\UpdateMenuItem [14419 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\UpdateMenuItem [3404 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\UpdateMenuItem [1699 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GenerateUploadUrl [14729 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GenerateUploadUrl [3173 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GenerateUploadUrl [2044 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\Auth [3912 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GetMenuItems [4802 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\DeleteMenuItem [4350 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\CreateMenuItem [4535 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\UpdateMenuItem [4240 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack\GenerateUploadUrl [4235 ms]
+Serverless: Packaging service...
+Serverless: Remove C:\Users\sevgi\Desktop\udacity\cloud-developer\capstone\udacity-capstone\backend\.webpack
+Serverless: Creating Stack...
+Serverless: Checking Stack create progress...
+CloudFormation - CREATE_IN_PROGRESS - AWS::CloudFormation::Stack - menu-app-dev
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - ServerlessDeploymentBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - ServerlessDeploymentBucket
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - ServerlessDeploymentBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::BucketPolicy - ServerlessDeploymentBucketPolicy
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::BucketPolicy - ServerlessDeploymentBucketPolicy
+CloudFormation - CREATE_COMPLETE - AWS::S3::BucketPolicy - ServerlessDeploymentBucketPolicy
+CloudFormation - CREATE_COMPLETE - AWS::CloudFormation::Stack - menu-app-dev
+Serverless: Stack create finished...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service Auth.zip file to S3 (1.97 MB)...
+Serverless: Uploading service GetMenuItems.zip file to S3 (3.13 MB)...
+Serverless: Uploading service DeleteMenuItem.zip file to S3 (3.13 MB)...
+Serverless: Uploading service GenerateUploadUrl.zip file to S3 (3.14 MB)...
+Serverless: Uploading service UpdateMenuItem.zip file to S3 (3.13 MB)...
+Serverless: Uploading service CreateMenuItem.zip file to S3 (3.13 MB)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - menu-app-dev
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - MenuItemBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - AuthLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateMenuItemLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - GenerateUploadUrlIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GenerateUploadUrlLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateMenuItemLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteMenuItemLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - CreateMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - UpdateMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - DeleteMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - MenuItemDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetMenuItemsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - GetMenuItemsIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - MenuItemDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - CreateMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - GenerateUploadUrlIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - DeleteMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - MenuItemBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - GetMenuItemsIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GenerateUploadUrlLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateMenuItemLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - UpdateMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteMenuItemLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - CreateMenuItemLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GenerateUploadUrlLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - AuthLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetMenuItemsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateMenuItemLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - DeleteMenuItemLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - AuthLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetMenuItemsLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - UpdateMenuItemLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RequestValidator - RequestBodyValidator
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - CreateMenuItemModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::GatewayResponse - GatewayResponseDefault4XX
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - UpdateMenuItemModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitems
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RequestValidator - RequestBodyValidator
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - CreateMenuItemModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - UpdateMenuItemModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitems
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::GatewayResponse - GatewayResponseDefault4XX
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Model - CreateMenuItemModel
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::RequestValidator - RequestBodyValidator
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Model - UpdateMenuItemModel
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::GatewayResponse - GatewayResponseDefault4XX
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitems
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitemsMenuitemidVar
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitemsMenuitemidVar
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitemsMenuitemidVar
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitemsMenuitemidVarAttachment
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitemsMenuitemidVarAttachment
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceMenuitemsMenuitemidVarAttachment
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarAttachmentOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarAttachmentOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarAttachmentOptions
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - DeleteMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - GetMenuItemsIamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - MenuItemBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteMenuItemLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - UpdateMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - GenerateUploadUrlIamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - CreateMenuItemIamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - AuthLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - AuthLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - AuthLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateMenuItemLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetMenuItemsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GenerateUploadUrlLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteMenuItemLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateMenuItemLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateMenuItemLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetMenuItemsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GenerateUploadUrlLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - DeleteMenuItemLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateMenuItemLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - UpdateMenuItemLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetMenuItemsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - AuthLambdaVersionjzK1YZ7ah6PTWdB7JGVHHpc17XkgHmZjc0GR3zbiU
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GenerateUploadUrlLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Authorizer - AuthApiGatewayAuthorizer
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - AuthLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - CreateMenuItemLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Authorizer - AuthApiGatewayAuthorizer
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - AuthLambdaVersionjzK1YZ7ah6PTWdB7JGVHHpc17XkgHmZjc0GR3zbiU
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - AuthLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Authorizer - AuthApiGatewayAuthorizer
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - AuthLambdaVersionjzK1YZ7ah6PTWdB7JGVHHpc17XkgHmZjc0GR3zbiU
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteMenuItemLambdaVersionAaFco0ApN4mP5bpQkZryjpuXe9VBm0SyCAxLwhcrJw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetMenuItemsLambdaVersionBBCUTWnY0XeYuicHTlEL00j54aUYqjkfJSiktKFv6MU
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GenerateUploadUrlLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetMenuItemsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateMenuItemLambdaVersiontG9pVcplaTJAcYbGIy4L0aWenKl4RO9dGkM0HGBhCw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateMenuItemLambdaVersionYeRF1Oh5O0zBji20HUDDqqgnAMcMyzeZ9gxxpGXWrqI
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteMenuItemLambdaVersionAaFco0ApN4mP5bpQkZryjpuXe9VBm0SyCAxLwhcrJw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GenerateUploadUrlLambdaVersion9oXALxpLmka4dvvfOWOoun7P9rkNy7M5eDN2KM5Ks
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GenerateUploadUrlLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetMenuItemsLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteMenuItemLambdaVersionAaFco0ApN4mP5bpQkZryjpuXe9VBm0SyCAxLwhcrJw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetMenuItemsLambdaVersionBBCUTWnY0XeYuicHTlEL00j54aUYqjkfJSiktKFv6MU
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateMenuItemLambdaVersiontG9pVcplaTJAcYbGIy4L0aWenKl4RO9dGkM0HGBhCw
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarAttachmentPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateMenuItemLambdaVersionYeRF1Oh5O0zBji20HUDDqqgnAMcMyzeZ9gxxpGXWrqI
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetMenuItemsLambdaVersionBBCUTWnY0XeYuicHTlEL00j54aUYqjkfJSiktKFv6MU
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GenerateUploadUrlLambdaVersion9oXALxpLmka4dvvfOWOoun7P9rkNy7M5eDN2KM5Ks
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarPatch
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarDelete
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsGet
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateMenuItemLambdaVersionYeRF1Oh5O0zBji20HUDDqqgnAMcMyzeZ9gxxpGXWrqI
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateMenuItemLambdaVersiontG9pVcplaTJAcYbGIy4L0aWenKl4RO9dGkM0HGBhCw
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarAttachmentPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarDelete
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarPatch
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GenerateUploadUrlLambdaVersion9oXALxpLmka4dvvfOWOoun7P9rkNy7M5eDN2KM5Ks
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarDelete
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarAttachmentPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsMenuitemidVarPatch
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodMenuitemsPost
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - MenuItemDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1603229512326
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1603229512326
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Deployment - ApiGatewayDeployment1603229512326
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - AuthLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - DeleteMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GenerateUploadUrlLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetMenuItemsLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - UpdateMenuItemLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - CreateMenuItemLambdaPermissionApiGateway
+CloudFormation - UPDATE_COMPLETE_CLEANUP_IN_PROGRESS - AWS::CloudFormation::Stack - menu-app-dev
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - menu-app-dev
+Serverless: Stack update finished...
+Service Information
+service: menu-app
+stage: dev
+region: eu-central-1
+stack: menu-app-dev
+resources: 52
+api keys:
+  None
+endpoints:
+  GET - https://4xz1ei3bd5.execute-api.eu-central-1.amazonaws.com/dev/menuitems
+  DELETE - https://4xz1ei3bd5.execute-api.eu-central-1.amazonaws.com/dev/menuitems/{menuItemId}
+  POST - https://4xz1ei3bd5.execute-api.eu-central-1.amazonaws.com/dev/menuitems
+  PATCH - https://4xz1ei3bd5.execute-api.eu-central-1.amazonaws.com/dev/menuitems/{menuItemId}
+  POST - https://4xz1ei3bd5.execute-api.eu-central-1.amazonaws.com/dev/menuitems/{menuItemId}/attachment
+functions:
+  Auth: menu-app-dev-Auth
+  GetMenuItems: menu-app-dev-GetMenuItems
+  DeleteMenuItem: menu-app-dev-DeleteMenuItem
+  CreateMenuItem: menu-app-dev-CreateMenuItem
+  UpdateMenuItem: menu-app-dev-UpdateMenuItem
+  GenerateUploadUrl: menu-app-dev-GenerateUploadUrl
+layers:
+  None
+
+Stack Outputs
+AuthLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:menu-app-dev-Auth:1
+DeleteMenuItemLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:menu-app-dev-DeleteMenuItem:1
+GenerateUploadUrlLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:menu-app-dev-GenerateUploadUrl:1
+CreateMenuItemLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:menu-app-dev-CreateMenuItem:1
+AwsDocApiId: 4xz1ei3bd5
+UpdateMenuItemLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:menu-app-dev-UpdateMenuItem:1
+GetMenuItemsLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:menu-app-dev-GetMenuItems:1
+ServiceEndpoint: https://4xz1ei3bd5.execute-api.eu-central-1.amazonaws.com/dev
+ServerlessDeploymentBucketName: menu-app-dev-serverlessdeploymentbucket-1a4i0sdqj4duo
+
+
+******************************************************************************
+Serverless: Update available. Run "npm install -g serverless@^2.8.0" to update
+******************************************************************************

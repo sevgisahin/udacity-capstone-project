@@ -1,0 +1,23 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title": "create-menuItem",
+    "type":"object",
+    "properties": {
+        "name":{
+            "type":"string"
+        },
+        "itemType":{
+            "type":"string"
+        }
+        ,
+        "ingredient":{
+            "type":"string"
+        }
+    },
+    "required":[
+        "name",
+        "itemType",
+        "ingredient"
+    ],
+    "additionalProperties": false
+}

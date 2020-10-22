@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "8aa58990-8d15-40b1-88f7-470a399d5433",
+		"name": "Udacity Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MenuItems",
+			"item": [
+				{
+					"name": "Get all menuitems",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.eu-central-1.amazonaws.com/dev/menuitems",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"eu-central-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"menuitems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create menuItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Meat\",\n\t\"itemType\": \"mainCourse\",\n    \"ingredient\":\"meat, salt, hearbs, mushroom\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.eu-central-1.amazonaws.com/dev/menuitems",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"eu-central-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"menuitems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update menuItem",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Meat\",\n    \"ingredient\":\"meat, salt, hearbs, mushroom, potato\",\n\t\"finished\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.eu-central-1.amazonaws.com/dev/menuitems/15641adb-1cb5-46f4-b0a8-90db33879a00",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"eu-central-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"menuitems",
+								"15641adb-1cb5-46f4-b0a8-90db33879a00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete menuItem",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.eu-centralt-1.amazonaws.com/dev/todos/1b5b8314-ce79-4f06-9eef-fc4d327e38ec",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"eu-centralt-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"todos",
+								"1b5b8314-ce79-4f06-9eef-fc4d327e38ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.eu-central-1.amazonaws.com/dev/menuitems/1b5b8314-ce79-4f06-9eef-fc4d327e38ec/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"eu-central-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"menuitems",
+								"1b5b8314-ce79-4f06-9eef-fc4d327e38ec",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fa3035fc-9069-4203-80c8-0c42654fbb61",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5bca15f-b526-476d-8a08-002799bc9161",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5da51744-4dd2-453b-8b0d-55eeb255e5fb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "82e342b2-8a97-4c20-9b18-78c50ef8fb89",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ff9410d1-b8ef-47d9-ad01-1a84ba4507a8",
+			"key": "apiId",
+			"value": ""
+		},
+		{
+			"id": "e0578c03-84b5-45ca-9f46-6f976162b7ee",
+			"key": "authToken",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
